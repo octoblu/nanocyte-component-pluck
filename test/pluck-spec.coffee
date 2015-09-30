@@ -11,4 +11,4 @@ describe 'Pluck', ->
   describe '->onEnvelope', ->
     describe 'when called with an envelope', ->
       it 'should return the message', ->
-        expect(@sut.onEnvelope({message: 'anything'})).to.deep.equal 'anything'
+        expect(@sut.onEnvelope({config: {key: 'potato' , value: {taco: {banana: {rabbit: 6}}} } , message: {taco: {banana: {rabbit: 6}}}})).to.deep.equal { potato: { taco: { banana: {rabbit: 6} } } }
